@@ -4,6 +4,8 @@ import HomeNewsCards from '../components/HomeNewsCards'
 import ThematicSection from '../components/ThematicSection'
 import Section from '../components/Section'
 import CategoryCard from '../components/CategoryCard'
+import SectionTitleHero from '../components/SectionTitleHero'
+import TwoColumnParallaxSection from '../components/TwoColumnParallaxSection.tsx'
 
 const Home = () => {
   const categories = [
@@ -64,6 +66,12 @@ const Home = () => {
             ))}
           </div>
         </Section>
+
+        {/* Section title: ΣΧΕΤΙΚΑ ΜΕ ΤΟ ΔΙΑΓΩΝΙΣΜΟ */}
+        <SectionTitleHero />
+
+        {/* Two columns: image (parallax) + exact text */}
+        <TwoColumnParallaxSection imageSrc="/images/about/paralaximg.jpg" />
       </div>
     </>
   )

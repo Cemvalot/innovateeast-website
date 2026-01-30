@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import Section from '../components/Section'
+import SectionTitleHero from '../components/SectionTitleHero'
 
 const About = () => {
   return (
@@ -19,18 +20,9 @@ const About = () => {
       </Helmet>
 
       <div className="pt-16 md:pt-20">
-        <Section background="white">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1A4B7A] mb-6">
-              ΣΧΕΤΙΚΑ ΜΕ ΤΟ ΔΙΑΓΩΝΙΣΜΟ
-            </h1>
-          </motion.div>
+        <SectionTitleHero />
 
+        <Section background="white">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left Column - Image */}
             <motion.div
