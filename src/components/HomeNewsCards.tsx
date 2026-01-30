@@ -50,7 +50,7 @@ const HomeNewsCards = ({ items = defaultNewsItems }: { items?: HomeNewsItem[] })
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="grid grid-cols-1 lg:grid-cols-2 w-full mb-12 md:mb-16"
+          className="grid grid-cols-1 lg:grid-cols-2 w-full mb-8 md:mb-10"
         >
           <div className="flex items-center justify-center min-h-[280px] p-8 bg-white">
             <img
@@ -71,7 +71,7 @@ const HomeNewsCards = ({ items = defaultNewsItems }: { items?: HomeNewsItem[] })
 
       {/* Section 2: News cards – even bigger, image exactly fills top box */}
       <section
-        className="pb-16 md:pb-20 bg-white min-h-[700px] flex flex-col"
+        className="pb-6 md:pb-8 bg-white min-h-[700px] flex flex-col"
         aria-label="Νέα και ανακοινώσεις"
       >
         <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-5 lg:px-6 xl:px-8 flex-1 flex flex-col min-h-0">

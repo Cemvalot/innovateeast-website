@@ -18,7 +18,7 @@ const Section = ({ children, className = '', id, background = 'white' }: Section
   return (
     <section
       id={id}
-      className={`py-16 md:py-24 ${bgClasses[background]} ${className}`}
+      className={`py-10 md:py-14 ${bgClasses[background]} ${className}`}
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
