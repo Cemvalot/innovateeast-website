@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import Hero from '../components/Hero'
+import HomeNewsCards from '../components/HomeNewsCards'
 import Section from '../components/Section'
 import CategoryCard from '../components/CategoryCard'
 
@@ -85,6 +86,9 @@ const Home = () => {
 
       <div className="pt-0">
         <Hero />
+
+        {/* News cards - logos + 4 cards linking to news / posts */}
+        <HomeNewsCards />
 
         {/* Category Section */}
         <Section id="categories" background="white">
