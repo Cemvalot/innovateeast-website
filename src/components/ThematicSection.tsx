@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 const ThematicSection = () => {
   return (
     <section
-      className="py-6 md:py-8 bg-white"
+      className="pt-6 md:pt-8 pb-0 bg-white"
       aria-label="Θεματικές ενότητες"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[380px] md:min-h-[450px] lg:min-h-[520px]">

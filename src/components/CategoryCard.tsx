@@ -6,9 +6,10 @@ interface CategoryCardProps {
   icon?: ReactNode
   title: string
   iconColor?: 'green' | 'blue'
+  greyBackground?: boolean
 }
 
-const CategoryCard = ({ imageSrc, icon, title, iconColor = 'blue' }: CategoryCardProps) => {
+const CategoryCard = ({ imageSrc, icon, title, iconColor = 'blue', greyBackground = false }: CategoryCardProps) => {
   const colorClasses = {
     green: 'text-[#65AF43]',
     blue: 'text-[#2A488A]',
@@ -20,27 +21,30 @@ const CategoryCard = ({ imageSrc, icon, title, iconColor = 'blue' }: CategoryCar
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col items-center text-center p-8 md:p-10 lg:p-12 bg-white min-h-[320px] flex-1 flex"
+      className={`flex flex-col items-center text-center p-4 md:p-5 lg:p-5 w-full min-h-[320px] self-stretch flex ${greyBackground ? 'bg-[#F3F4F6]' : 'bg-white'}`}
     >
-      {/* Gif or icon – clear gap below like second image */}
-      <div className={`mb-7 md:mb-8 flex-shrink-0 ${!imageSrc ? colorClasses[iconColor] : ''}`}>
+      {/* Gif or icon – larger, crisp */}
+      <div className={`mb-3 md:mb-4 flex-shrink-0 ${!imageSrc ? colorClasses[iconColor] : ''}`}>
         {imageSrc ? (
           <img
             src={imageSrc}
             alt=""
-            className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 object-contain"
+            className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 object-contain select-none"
+            draggable={false}
           />
         ) : (
-          <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
+          <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center">
             {icon}
           </div>
         )}
       </div>
 
-      {/* Words below – black, centered, good line spacing like second image */}
-      <h3 className="text-black text-base md:text-lg font-medium leading-relaxed flex-1 flex items-center justify-center">
-        {title}
-      </h3>
+      {/* Text block – fixed height, max-width so text wraps below gif (not one long line) */}
+      <div className="h-[110px] w-full flex items-center justify-center shrink-0 px-1">
+        <h3 className="text-black text-sm md:text-base font-medium leading-relaxed text-center break-words text-pretty w-full max-w-[min(100%,18rem)]">
+          {title}
+        </h3>
+      </div>
     </motion.div>
   )
 }

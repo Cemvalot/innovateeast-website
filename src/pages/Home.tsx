@@ -51,14 +51,15 @@ const Home = () => {
         {/* Thematic section: image + text (two containers) */}
         <ThematicSection />
 
-        {/* Category Section – no gap above, 4 containers spaced evenly */}
-        <Section id="categories" background="white" className="pt-0">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10 items-stretch min-h-[380px] lg:min-h-[420px]">
+        {/* Category Section – full width, 4 cards spaced evenly */}
+        <Section id="categories" background="white" className="pt-0 pb-6 md:pb-8" fullWidth tightPadding>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 items-stretch min-h-[320px] w-full">
             {categories.map((category, index) => (
               <CategoryCard
                 key={index}
                 imageSrc={category.imageSrc}
                 title={category.title}
+                greyBackground={index === 1 || index === 3}
               />
             ))}
           </div>
