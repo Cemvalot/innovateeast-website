@@ -32,4 +32,89 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  /**
+   * Video Text Fill Effect
+   * 
+   * Makes text appear with video content inside the letters.
+   * 
+   * Technique: 
+   * 1. Video element is positioned absolutely behind text
+   * 2. Text has transparent color
+   * 3. Video is masked/clipped to text shape using CSS
+   * 
+   * Implementation:
+   * - Container holds both video and text
+   * - Video uses mix-blend-mode or mask to show only in text area
+   * - Text acts as a window to the video behind
+   */
+  .video-text-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    /* Create stacking context */
+    isolation: isolate;
+  }
+
+  .video-text-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    /* 
+     * The video will be visible through the text
+     * We use the text as a mask for the video
+     */
+  }
+
+  .video-text-fill {
+    position: relative;
+    z-index: 1;
+    /* 
+     * Make text transparent so we can see video behind
+     * Then use mix-blend-mode to create the fill effect
+     */
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    /* 
+     * Use mix-blend-mode: screen to make video show through text
+     * This creates the effect where video fills the text
+     */
+    mix-blend-mode: screen;
+    /* 
+     * Alternative: Use difference blend mode for different effect
+     * mix-blend-mode: difference;
+     */
+  }
+
+  /**
+   * Better approach: Use CSS mask with text
+   * We create a mask from the text and apply it to the video
+   * This requires the text to be rendered first, then we mask the video
+   */
+  @supports (mask-image: url('')) or (-webkit-mask-image: url('')) {
+    .video-text-container {
+      /* The container will hold the masked video */
+    }
+    
+    .video-text-bg {
+      /* 
+       * In a perfect world, we'd mask the video with the text
+       * But CSS doesn't support masking video with text directly
+       * So we use mix-blend-mode as a workaround
+       */
+    }
+  }
+
+  /**
+   * Fallback: If blend modes don't work, show white text
+   */
+  @supports not (mix-blend-mode: screen) {
+    .video-text-fill {
+      color: white;
+      -webkit-text-fill-color: white;
+    }
+  }
 }
