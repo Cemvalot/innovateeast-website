@@ -6,7 +6,7 @@ import VideoLogoBadge from './VideoLogoBadge'
  * Hero Section Component - Split Screen Layout
  * 
  * Full-width split screen design:
- * - Left panel: White background with circular logo badge (video + transparent overlay)
+ * - Left panel: Grey background (same as logo badge back layer) with logo badge
  * - Right panel: Blue background (#2f5f85) with title and CTA buttons (centered)
  * - 50/50 split on desktop, stacked on mobile
  * - min-height: 700px
@@ -16,8 +16,8 @@ const Hero = () => {
   return (
     <section className="w-full grid grid-cols-1 lg:grid-cols-2 min-h-[700px]">
       
-      {/* LEFT PANEL: White background with Logo Badge */}
-      <div className="bg-[#FFFFFF] flex items-center justify-center order-1 lg:order-1">
+      {/* LEFT PANEL: Grey background (same as logo badge) with Logo Badge */}
+      <div className="bg-[#F3F4F6] flex items-center justify-center order-1 lg:order-1">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}

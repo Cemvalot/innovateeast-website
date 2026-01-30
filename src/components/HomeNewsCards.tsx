@@ -55,7 +55,7 @@ const HomeNewsCards = ({ items = defaultNewsItems }: { items?: HomeNewsItem[] })
           />
         </div>
         {/* Right: under blue hero part - Break Even logo, grey background */}
-        <div className="flex items-center justify-center min-h-[280px] p-8 bg-gray-100">
+        <div className="flex items-center justify-center min-h-[280px] p-8 bg-[#F3F4F6]">
           <img
             src="/logos/breakevenlogo.png"
             alt="BREAK EVEN Consulting"
