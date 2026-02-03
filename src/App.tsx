@@ -6,6 +6,7 @@ import CookieConsent from './components/CookieConsent'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import LoadingSpinner from './components/LoadingSpinner'
+import ScrollToTop from './components/ScrollToTop'
 import StickySocialBar from './components/StickySocialBar'
 
 // Lazy load routes for code splitting
@@ -36,6 +37,7 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <ScrollToTop />
       <Header />
       <StickySocialBar />
       {showAwardsModal && <AwardsModal onClose={handleCloseAwards} />}

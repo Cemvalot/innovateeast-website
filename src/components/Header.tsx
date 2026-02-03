@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { motion } from 'framer-motion'
 import MobileMenu from './MobileMenu'
 import logotype1 from '../assets/logos/logotype1.png'
 import logotype2 from '../assets/logos/logotype2.png'
@@ -31,19 +30,16 @@ const Header = () => {
 
   return (
     <>
-      <motion.header
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5 }}
-        className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-gray-200 ${
+      <header
+        className={`sticky top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
           isScrolled
             ? 'bg-white/95 backdrop-blur-sm shadow-md'
             : 'bg-white/90 backdrop-blur-sm'
         }`}
       >
-        <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20 md:h-24 lg:h-28">
-            {/* Logo - links to homepage; one in-flow img for size, hover overlay on top */}
+        <nav className="w-full pl-4 sm:pl-6 lg:pl-8 pr-4 sm:pr-6 lg:pr-8 py-1">
+          <div className="flex items-center justify-between min-h-[5rem] md:min-h-[6.5rem] lg:min-h-[7.5rem] xl:min-h-[8.5rem] w-full">
+            {/* Logo - λιγο πιο δεξια, πιο μεγαλο */}
             <Link
               to="/"
               className="flex-shrink-0 flex items-center relative block"
@@ -54,38 +50,32 @@ const Header = () => {
               <img
                 src={logotype1}
                 alt="Innovate East"
-                className="h-14 md:h-20 lg:h-24 xl:h-28 w-auto block"
+                className="h-16 md:h-24 lg:h-28 xl:h-32 w-auto block"
               />
               {/* Hover image overlays on top */}
               <img
                 src={logotype2}
                 alt=""
                 role="presentation"
-                className="h-14 md:h-20 lg:h-24 xl:h-28 w-auto absolute left-0 top-1/2 -translate-y-1/2 object-contain object-left transition-opacity duration-200 pointer-events-none"
+                className="h-16 md:h-24 lg:h-28 xl:h-32 w-auto absolute left-0 top-1/2 -translate-y-1/2 object-contain object-left transition-opacity duration-200 pointer-events-none"
                 style={{ opacity: isLogoHovered ? 1 : 0 }}
               />
             </Link>
 
-            {/* Desktop Navigation - centered, shifted a little to the right */}
-            <div className="hidden lg:flex flex-1 justify-center items-center pl-8 lg:pl-12">
+            {/* Desktop Navigation - μεγαλο κενο αριστερα, κεντραρισμενα links */}
+            <div className="hidden lg:flex flex-1 justify-center items-center pl-12 lg:pl-20 xl:pl-28">
               <div className="flex items-center space-x-6 xl:space-x-10">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`relative text-sm lg:text-base font-medium transition-colors ${
+                  className={`relative text-sm lg:text-base font-bold transition-colors ${
                     location.pathname === link.path
-                      ? 'text-[#1A4B7A]'
-                      : 'text-gray-700 hover:text-[#1A4B7A]'
+                      ? 'text-[#54AD40]'
+                      : 'text-[#3D4C7F] hover:text-[#54AD40]'
                   }`}
                 >
                   {link.label}
-                  {location.pathname === link.path && (
-                    <motion.div
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#1A4B7A]"
-                      layoutId="activeTab"
-                    />
-                  )}
                 </Link>
               ))}
               </div>
@@ -113,7 +103,7 @@ const Header = () => {
             </div>
           </div>
         </nav>
-      </motion.header>
+      </header>
       <MobileMenu
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
