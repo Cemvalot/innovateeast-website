@@ -71,122 +71,80 @@ const Competition = () => {
         />
       </Helmet>
 
-      <div className="pt-16 md:pt-20">
+      <div className="pt-0">
         {/* FAQ Section */}
         <Section background="white">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-5xl mx-auto"
+            className="max-w-4xl mx-auto flex flex-col items-center"
           >
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
-              Διαγωνισμός
-            </h1>
-
-            <div className="space-y-1">
+            <div className="space-y-0 w-full">
               {faqItems.map((item) => {
                 const isOpen = item.id === openId
                 return (
-                  <div key={item.id} className="overflow-hidden">
-                    <button
-                      type="button"
-                      onClick={() => toggleItem(item.id)}
-                      className="w-full flex items-center justify-between py-4 text-left hover:bg-gray-50/50 transition-colors rounded-lg px-2 -mx-2"
-                    >
-                      <span className="text-base md:text-lg font-semibold text-[#1A4B7A] pr-4">
-                        {item.question}
-                      </span>
-                      <motion.span
-                        initial={false}
-                        animate={{ rotate: isOpen ? 180 : 0 }}
-                        transition={{ duration: 0.3, ease: 'easeInOut' }}
-                        className="text-[#1A4B7A] flex-shrink-0"
+                  <div key={item.id} className="overflow-hidden w-full">
+                    <div className="w-full flex flex-col items-stretch">
+                      <button
+                        type="button"
+                        onClick={() => toggleItem(item.id)}
+                        className="w-full flex items-center justify-between gap-2 py-5 md:py-6 text-left hover:bg-gray-50/50 transition-colors rounded-lg px-0"
                       >
-                        <svg
-                          className="w-5 h-5"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      </motion.span>
-                    </button>
-                    <div className="h-px bg-[#4CAF50] mx-2" />
-                    <AnimatePresence initial={false}>
-                      {isOpen && (
-                        <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{
-                            duration: 0.3,
-                            ease: 'easeInOut',
-                            height: { duration: 0.3 },
-                          }}
-                          className="overflow-hidden"
-                        >
-                          <div className="py-4 px-2">
-                            <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                              {item.answer}
-                            </p>
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                        <span className="text-xl md:text-2xl lg:text-3xl font-semibold text-[#1A4B7A] min-w-0">
+                          {item.question}
+                        </span>
+                        <span className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
+                          <motion.span
+                            initial={false}
+                            animate={{ rotate: isOpen ? 180 : 0 }}
+                            transition={{ duration: 0.3, ease: 'easeInOut' }}
+                            className="text-[#1A4B7A] block"
+                          >
+                            <svg
+                              className="w-6 h-6"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </motion.span>
+                        </span>
+                      </button>
+                      <div className="h-px bg-[#4CAF50] w-full shrink-0 mt-1 mb-3 md:mb-4" />
+                      <AnimatePresence initial={false}>
+                        {isOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{
+                              duration: 0.3,
+                              ease: 'easeInOut',
+                              height: { duration: 0.3 },
+                            }}
+                            className="overflow-hidden w-full"
+                          >
+                            <div className="py-3 px-0">
+                              <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
+                                {item.answer}
+                              </p>
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
                   </div>
                 )
               })}
             </div>
           </motion.div>
-        </Section>
-
-        {/* Awards Section */}
-        <Section background="white">
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-            {/* Left - Description */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center md:text-left"
-            >
-              <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
-                Ανάδειξη των νικητήριων ιδεών
-              </h2>
-              <p className="text-lg text-gray-700">
-                Οι νικητήριες ιδέες θα παρουσιαστούν και θα βραβευθούν στην
-                Τελετή Βράβευσης, παρουσία εκπροσώπων της ακαδημαϊκής
-                κοινότητας, της τοπικής αυτοδιοίκησης και του επιχειρηματικού
-                κόσμου.
-              </p>
-            </motion.div>
-
-            {/* Right - Awards */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center md:text-right"
-            >
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Βραβεία
-              </h3>
-              <ul className="space-y-2 text-lg font-semibold text-[#4CAF50]">
-                <li>1η Θέση: 5.000 €</li>
-                <li>2η Θέση: 3.000 €</li>
-                <li>3η Θέση: 2.000 €</li>
-              </ul>
-            </motion.div>
-          </div>
         </Section>
       </div>
     </>

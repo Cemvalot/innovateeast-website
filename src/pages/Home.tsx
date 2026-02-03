@@ -6,6 +6,7 @@ import Section from '../components/Section'
 import CategoryCard from '../components/CategoryCard'
 import SectionTitleHero from '../components/SectionTitleHero'
 import TwoColumnParallaxSection from '../components/TwoColumnParallaxSection.tsx'
+import ThreeImagesSection from '../components/ThreeImagesSection.tsx'
 
 const Home = () => {
   const categories = [
@@ -72,6 +73,9 @@ const Home = () => {
 
         {/* Two columns: image (parallax) + exact text */}
         <TwoColumnParallaxSection imageSrc="/images/about/paralaximg.jpg" />
+
+        {/* Τρεις εικόνες σε σειρά – INNOVATE EAST */}
+        <ThreeImagesSection />
       </div>
     </>
   )

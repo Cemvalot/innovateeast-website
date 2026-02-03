@@ -23,12 +23,13 @@ const TwoColumnParallaxSection = ({ imageSrc = '/images/about/paralaximg.jpg' }:
         aria-hidden
       />
 
-      {/* Right 50%: κείμενο */}
-      <div className="flex flex-col justify-center p-8 md:p-10 lg:p-12 xl:p-16 bg-white">
+      {/* Right 50%: κείμενο κεντραρισμένο στο κομμάτι, αλλά align left */}
+      <div className="flex flex-col justify-center items-center p-8 md:p-10 lg:p-12 xl:p-16 bg-white">
         <div className="w-full max-w-xl space-y-6 text-left">
           <p className="text-lg md:text-xl text-gray-800 leading-relaxed">
+            <span>Ο </span>
             <span className="text-[#4CAF50] font-semibold">
-              Ο 1ος Διαγωνισμός Πράσινης και Γαλάζιας Καινοτομίας της Μητρόπολης Μεσογαίας και Λαυρεωτικής
+              1ος Διαγωνισμός Πράσινης και Γαλάζιας Καινοτομίας της Μητρόπολης Μεσογαίας και Λαυρεωτικής
             </span>{' '}
             φέρνει για πρώτη φορά κοντά, σε έναν κοινό σκοπό, το σύνολο των δημόσιων φορέων, των ακαδημαϊκών ιδρυμάτων, αλλά και των επιχειρήσεων της ευρύτερης περιοχής.
           </p>
