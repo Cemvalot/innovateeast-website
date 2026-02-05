@@ -62,17 +62,33 @@ const MobileMenu = ({ isOpen, onClose, navLinks, currentPath }: MobileMenuProps)
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <Link
-                      to={link.path}
-                      onClick={onClose}
-                      className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
-                        currentPath === link.path
-                          ? 'bg-[#1A4B7A]/10 text-[#1A4B7A]'
-                          : 'text-gray-700 hover:bg-gray-100 hover:text-[#1A4B7A]'
-                      }`}
-                    >
-                      {link.label}
-                    </Link>
+                    {link.path === '/terms' ? (
+                      <a
+                        href="https://383534e7-7332-4e0f-8956-daa42e69494b.filesusr.com/ugd/100ec9_5feae83082ab445eb5a9ab69002b5264.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={onClose}
+                        className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                          currentPath === link.path
+                            ? 'bg-[#1A4B7A]/10 text-[#1A4B7A]'
+                            : 'text-gray-700 hover:bg-gray-100 hover:text-[#1A4B7A]'
+                        }`}
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        to={link.path}
+                        onClick={onClose}
+                        className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                          currentPath === link.path
+                            ? 'bg-[#1A4B7A]/10 text-[#1A4B7A]'
+                            : 'text-gray-700 hover:bg-gray-100 hover:text-[#1A4B7A]'
+                        }`}
+                      >
+                        {link.label}
+                      </Link>
+                    )}
                   </motion.div>
                 ))}
               </nav>

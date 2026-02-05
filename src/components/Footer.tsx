@@ -39,15 +39,27 @@ const Footer = () => {
                 Innovate East
               </p>
               <nav className="flex flex-col gap-3" aria-label="Footer navigation">
-                {footerNavLinks.map((link) => (
-                  <Link
-                    key={link.path}
-                    to={link.path}
-                    className="text-white text-base lg:text-lg font-medium hover:opacity-90 transition-opacity"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+                {footerNavLinks.map((link) => 
+                  link.path === '/terms' ? (
+                    <a
+                      key={link.path}
+                      href="https://383534e7-7332-4e0f-8956-daa42e69494b.filesusr.com/ugd/100ec9_5feae83082ab445eb5a9ab69002b5264.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white text-base lg:text-lg font-medium hover:opacity-90 transition-opacity"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      key={link.path}
+                      to={link.path}
+                      className="text-white text-base lg:text-lg font-medium hover:opacity-90 transition-opacity"
+                    >
+                      {link.label}
+                    </Link>
+                  )
+                )}
               </nav>
             </div>
           </div>

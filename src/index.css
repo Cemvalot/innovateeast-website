@@ -8,7 +8,7 @@
   }
   
   body {
-    @apply antialiased;
+    @apply antialiased font-sans;
   }
 }
 
@@ -89,24 +89,6 @@
      */
   }
 
-  /**
-   * Better approach: Use CSS mask with text
-   * We create a mask from the text and apply it to the video
-   * This requires the text to be rendered first, then we mask the video
-   */
-  @supports (mask-image: url('')) or (-webkit-mask-image: url('')) {
-    .video-text-container {
-      /* The container will hold the masked video */
-    }
-    
-    .video-text-bg {
-      /* 
-       * In a perfect world, we'd mask the video with the text
-       * But CSS doesn't support masking video with text directly
-       * So we use mix-blend-mode as a workaround
-       */
-    }
-  }
 
   /**
    * Fallback: If blend modes don't work, show white text

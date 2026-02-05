@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Nunito Sans', 'sans-serif'],
+      },
       colors: {
         'brand-green': '#4CAF50',
         'brand-blue': '#1A4B7A',

@@ -29,7 +29,7 @@ const Hero = () => {
 
       {/* RIGHT PANEL: Blue background with Title and Buttons */}
       <div className="bg-[#2f5f85] flex items-center justify-center order-2 lg:order-2">
-        <div className="w-full max-w-[520px] px-8 text-white text-center">
+        <div className="w-full max-w-[520px] px-8 text-white text-left">
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -45,22 +45,40 @@ const Hero = () => {
             {/* Two Green CTA Buttons */}
             <div className="mt-12 flex flex-col gap-6">
               {/* Button 1: ΟΡΟΙ ΣΥΜΜΕΤΟΧΗΣ */}
-              <Link to="/terms" className="block">
+              <a href="https://383534e7-7332-4e0f-8956-daa42e69494b.filesusr.com/ugd/100ec9_5feae83082ab445eb5a9ab69002b5264.pdf" target="_blank" rel="noopener noreferrer" className="block w-fit">
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="h-[54px] w-full rounded-md bg-[#4CAF50] text-white font-semibold tracking-wide hover:brightness-95 active:brightness-90 transition-all"
+                  className="h-[54px] px-12 rounded-none bg-[#8BBA89] text-white text-sm font-normal tracking-wide transition-all group"
+                  style={{
+                    background: 'linear-gradient(to right, #8BBA89, #8BBA89)',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'linear-gradient(to right, #3A7A8C, #4FB3A8)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'linear-gradient(to right, #8BBA89, #8BBA89)'
+                  }}
                 >
                   ΟΡΟΙ ΣΥΜΜΕΤΟΧΗΣ
                 </motion.button>
-              </Link>
+              </a>
               
               {/* Button 2: ΧΡΟΝΟΔΙΑΓΡΑΜΜΑ */}
-              <Link to="/timeline" className="block">
+              <Link to="/timeline" className="block w-fit">
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="h-[54px] w-full rounded-md bg-[#4CAF50] text-white font-semibold tracking-wide hover:brightness-95 active:brightness-90 transition-all"
+                  className="h-[54px] px-12 rounded-none bg-[#8BBA89] text-white text-sm font-normal tracking-wide transition-all group"
+                  style={{
+                    background: 'linear-gradient(to right, #8BBA89, #8BBA89)',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'linear-gradient(to right, #3A7A8C, #4FB3A8)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'linear-gradient(to right, #8BBA89, #8BBA89)'
+                  }}
                 >
                   ΧΡΟΝΟΔΙΑΓΡΑΜΜΑ
                 </motion.button>

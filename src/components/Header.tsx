@@ -65,19 +65,35 @@ const Header = () => {
             {/* Desktop Navigation - μεγαλο κενο αριστερα, κεντραρισμενα links */}
             <div className="hidden lg:flex flex-1 justify-center items-center pl-12 lg:pl-20 xl:pl-28">
               <div className="flex items-center space-x-6 xl:space-x-10">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`relative text-sm lg:text-base font-bold transition-colors ${
-                    location.pathname === link.path
-                      ? 'text-[#54AD40]'
-                      : 'text-[#3D4C7F] hover:text-[#54AD40]'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => 
+                link.path === '/terms' ? (
+                  <a
+                    key={link.path}
+                    href="https://383534e7-7332-4e0f-8956-daa42e69494b.filesusr.com/ugd/100ec9_5feae83082ab445eb5a9ab69002b5264.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`relative text-sm lg:text-base font-bold transition-colors ${
+                      location.pathname === link.path
+                        ? 'text-[#54AD40]'
+                        : 'text-[#3D4C7F] hover:text-[#54AD40]'
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className={`relative text-sm lg:text-base font-bold transition-colors ${
+                      location.pathname === link.path
+                        ? 'text-[#54AD40]'
+                        : 'text-[#3D4C7F] hover:text-[#54AD40]'
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
               </div>
             </div>
 
