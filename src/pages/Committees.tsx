@@ -7,6 +7,7 @@ interface CommitteeMember {
   name: string
   title: string
   image: string
+  link?: string
 }
 
 const scientificCommittee: CommitteeMember[] = [
@@ -31,6 +32,7 @@ const scientificCommittee: CommitteeMember[] = [
     name: 'ΔΗΜΗΤΡΙΟΣ ΒΛΑΧΑΚΗΣ',
     title: 'Αν Καθηγητής, Τμήμα Βιοτεχνολογίας, Γεωπονικό Πανεπιστήμιο',
     image: '/images/committees/4.jpg.avif',
+    link: 'https://w1.aua.gr/gbt/faculty/βλαχάκης-δημήτριος/',
   },
   {
     name: 'ΒΑΣΙΛΗΣ ΓΙΑΝΝΟΠΟΥΛΟΣ',
@@ -39,13 +41,14 @@ const scientificCommittee: CommitteeMember[] = [
   },
   {
     name: 'ΓΙΑΝΝΗΣ ΚΑΛΟΓΗΡΟΥ',
-    title: 'Ομότιμος Καθηγητής Τεχνολογικής Οικονομικής & Βιομηχανικής',
+    title: 'Ομότιμος Καθηγητής Τεχνολογικής Οικονομικής & Βιομηχανικής Στρατηγικής στο ΕΜΠ',
     image: '/images/committees/6.jpg.avif',
   },
   {
     name: 'ΣΤΕΦΑΝΟΣ ΚΑΛΟΓΗΡΟΥ',
     title: 'Αν. Καθηγητής, Τμήμα Επιστήμης Ζωϊκής Παραγωγής, Γεωπονικό Πανεπιστήμιο',
     image: '/images/committees/7η.jpg.avif',
+    link: 'https://zp.aua.gr/faculty-2/kalogirou_stefanos/',
   },
   {
     name: 'ΦΟΙΒΗ ΚΟΥΝΤΟΥΡΗ',
@@ -59,17 +62,18 @@ const scientificCommittee: CommitteeMember[] = [
   },
   {
     name: 'ΔΗΜΗΤΡΙΟΣ ΜΑΝΩΛΑΚΟΣ',
-    title: 'Καθηγητής, Τμήμα Χημικών Μηχανικών, Εθνικό Μετσόβιο Πολυτεχνείο',
+    title: 'Αν. Καθηγητής, Τμήμα Αξιοποίησης Φυσικών Πόρων & Γεωργικής Μηχανικής, Γεωπονικό Πανεπιστήμιο',
     image: '/images/committees/10η.jpg.avif',
+    link: 'https://w1.aua.gr/afp/faculty/d-manolakos_gr/',
   },
   {
     name: 'ΘΩΜΑΣ ΜΠΑΡΤΖΑΝΑΣ',
-    title: 'Καθηγητής, Τμήμα Ναυτιλιακών Σπουδών, Πανεπιστήμιο Πειραιώς',
+    title: 'Αντιπρύτανης Έρευνας, Οικονομικών & Ανάπτυξης, Αναπληρωτής Καθηγητής Θερμοκηπιακές και Υδροπονικές Εγκαταστάσεις, Γεωπονικό Πανεπιστήμιο Αθηνών',
     image: '/images/committees/11η.png.avif',
   },
   {
     name: 'ΓΙΑΝΝΗΣ ΨΥΧΑΡΗΣ',
-    title: 'Καθηγητής, Τμήμα Ναυτιλιακών Σπουδών, Πανεπιστήμιο Πειραιώς',
+    title: 'Καθηγητής στο Πάντειο Πανεπιστήμιο, Πρόεδρος Ινστιτούτου Περιφερειακής Ανάπτυξης Παντείου Πανεπιστημίου',
     image: '/images/committees/12η.jpg.avif',
   },
   {
@@ -84,28 +88,30 @@ const scientificCommittee: CommitteeMember[] = [
   },
   {
     name: 'ΟΔΥΣΣΕΑΣ ΣΠΗΛΙΟΠΟΥΛΟΣ',
-    title: 'Καθηγητής, Τμήμα Ναυτιλιακών Σπουδών, Πανεπιστήμιο Πειραιώς',
+    title: 'Κοσμήτορας της Σχολής Διοίκησης στο Πανεπιστήμιο Πελοποννήσου',
     image: '/images/committees/15.jpeg.avif',
   },
   {
     name: 'ΣΠΥΡΟΣ ΣΥΡΜΑΚΕΣΗΣ',
-    title: 'Καθηγητής, Τμήμα Ναυτιλιακών Σπουδών, Πανεπιστήμιο Πειραιώς',
+    title: 'Καθηγητής στο Πανεπιστήμιο Πελοποννήσου, Τμήμα Ηλεκτρολόγων Μηχανικών και Μηχανικών Υπολογιστών',
     image: '/images/committees/16.jpg.avif',
   },
   {
     name: 'ΕΛΕΝΗ ΣΤΡΑΝΤΖΑΛΗ',
-    title: 'Καθηγήτρια, Τμήμα Ναυτιλιακών Σπουδών, Πανεπιστήμιο Πειραιώς',
+    title: 'Επίκουρη Καθηγήτρια Τμήματος Ναυπηγών Μηχανικών, ΠΑ.Δ.Α.',
     image: '/images/committees/17.jpg.avif',
+    link: 'https://na.uniwa.gr/strantzali_e/',
   },
   {
     name: 'ΑΓΓΕΛΟΣ ΤΣΑΚΑΝΙΚΑΣ',
-    title: 'Καθηγητής, Τμήμα Ναυτιλιακών Σπουδών, Πανεπιστήμιο Πειραιώς',
+    title: 'Αναπληρωτής Καθηγητής Οικονομικής Αξιολόγησης Συστημάτων Τεχνολογίας Καινοτομίας και Επιχειρηματικότητας ΕΜΠ, Διευθυντής του Εργαστηρίου Βιομηχανικής και Ενεργειακής Οικονομίας (EBEO)',
     image: '/images/committees/18.jpg.avif',
   },
   {
     name: 'ΝΙΚΟΣ ΧΩΡΙΑΝΟΠΟΥΛΟΣ',
     title: 'Αν. Καθηγητής, Τμήμα Επιστήμης Τροφίμων & Διατροφής του Ανθρώπου, Γεωπονικό Πανεπιστήμιο',
     image: '/images/committees/19.jpg.avif',
+    link: 'https://w1.aua.gr/etda/',
   },
 ]
 
@@ -120,7 +126,7 @@ const additionalCommittee: CommitteeMember[] = [
   },
   {
     name: 'ΜΑΡΚΟΣ ΜΑΡΓΑΡΙΤΗΣ',
-    title: 'Δρ Μηχανικός ΕΜΠ σε θέματα περιβαλλοντικών τεχνολογιών και διαχείρισης αποβλήτων',
+    title: 'Δρ Μηχανικός ΕΜΠ',
     image: '/images/committees/9η.jpg.avif',
   },
   {
@@ -170,36 +176,43 @@ const coachesCommittee: CommitteeMember[] = [
     name: 'ΑΝΔΡΕΑΣ ΑΛΕΞΟΠΟΥΛΟΣ',
     title: 'Αναπληρωτής Καθηγητής στο Πανεπιστήμιο Δυτικής Αττικής, Τμήμα Λογιστικής και Χρηματοοικονομικής',
     image: '/images/committees/28.jpg.avif',
+    link: 'https://msc-accounting.uniwa.gr/profile/alexopoylos-andreas/',
   },
   {
     name: 'ΕΛΛΗ ΑΡΜΥΡΑ',
     title: 'Project Manager για νεοφυείς επιχειρήσεις',
     image: '/images/committees/29.jpg.avif',
+    link: 'https://www.linkedin.com/authwall?trk=gf&trkInfo=AQHHB-pZ7SI55gAAAZwtspA4GYCM4u931j9zNfAHvIi6dUmxzfAicocyxET-OfU8lHXtXApD6_ht-jTHVwNa0PbL2mYNPkyLTpEXDNhV5EjWdmZisVDXmghqrgaVSjcWp9DGNXY=&original_referer=https://www.innovateeast.gr/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Felli-armyra%2F',
   },
   {
     name: 'ΒΑΣΙΛΙΚΗ ΔΑΛΑΚΙΑΡΗ',
     title: 'R&D Engineer Lead @ PublicNext / Google Women Techmakers Ambassador',
     image: '/images/committees/30.png.avif',
+    link: 'https://www.linkedin.com/in/vadalakiari',
   },
   {
     name: 'ΝΕΚΤΑΡΙΑ ΜΑΡΑΒΑ',
     title: 'Project Manager, @Popsi',
     image: '/images/committees/31.jpg.avif',
+    link: 'https://startup-piraeus.gr/poioi-eimaste/nektaria-marava/',
   },
   {
     name: 'ΑΓΓΕΛΟΣ ΜΑΡΑΝΤΟΣ',
     title: 'Managing Partner, Sybacom, Psychologist',
     image: '/images/committees/32.jpg.avif',
+    link: 'https://www.linkedin.com/in/aggelosmarantos/',
   },
   {
     name: 'ΜΑΡΙΟΣ ΜΠΑΛΗΣ',
     title: 'Επιστήμονας Περιβάλλοντος στο Πανεπιστήμιο Αιγαίου, Τμήμα Περιβάλλοντος',
     image: '/images/committees/33.jpg.avif',
+    link: 'https://www.env.aegean.gr/all_staff/μάριος-μπαλής/',
   },
   {
     name: 'ΜΥΡΤΩ ΝΑΣΙΟΠΟΥΛΟΥ',
     title: 'Creative Consultant, Design Lead, woli Fintech',
     image: '/images/committees/34.jpg.avif',
+    link: 'https://www.linkedin.com/in/mirtonasiopoulou/',
   },
   {
     name: 'ΠΑΝΑΓΙΩΤΗΣ ΠΑΝΑΓΙΩΤΟΠΟΥΛΟΣ',
@@ -208,28 +221,33 @@ const coachesCommittee: CommitteeMember[] = [
   },
   {
     name: 'ΑΝΤΩΝΗΣ ΠΑΠΑΔΟΠΟΥΛΟΣ',
-    title: 'Διευθυντής Επιχειρηματικής Ανάπτυξης',
+    title: 'Διευθυντής Επιχειρηματικής Ανάπτυξης\nΝέα Γεωργία Νέα Γενιά',
     image: '/images/committees/36.jpg.avif',
+    link: 'https://www.linkedin.com/in/antonispapadopoulos/',
   },
   {
     name: 'ΚΑΤΕΡΙΝΑ ΠΑΠΑΔΟΥΛΗ',
-    title: 'Επικεφαλής του Γραφείου Μεταφοράς Τεχνολογίας',
+    title: 'Επικεφαλής του Γραφείου Μεταφοράς Τεχνολογίας του Γεωπονικού Πανεπιστημίου Αθηνών "InnovinAgri"',
     image: '/images/committees/37.jpg.avif',
+    link: 'https://www.linkedin.com/in/katerina-papadouli-b153aa60/',
   },
   {
     name: 'ΔΗΜΗΤΡΙΟΣ ΠΥΡΟΜΑΛΛΗΣ',
-    title: 'Αναπληρωτής Καθηγητής Πανεπιστημίου Δυτικής Αττικής',
+    title: 'Αναπληρωτής Καθηγητής Πανεπιστημίου Δυτικής Αττικής, Τμήμα Ηλεκτρολόγων και Μηχανικών Υπολογιστών',
     image: '/images/committees/38.jpg.avif',
+    link: 'https://www.linkedin.com/in/dimitris-piromalis/',
   },
   {
     name: 'ΛΙΑ ΣΟΥΡΛΑ',
     title: 'Learning & HR Consultant',
     image: '/images/committees/39.jpg.avif',
+    link: 'https://www.linkedin.com/in/liasourla',
   },
   {
     name: 'ΓΙΩΡΓΟΣ ΧΑΛΙΚΙΟΠΟΥΛΟΣ',
     title: 'Head of Digital Acquisition & MarTech, insurancemarket',
     image: '/images/committees/40.jpg.avif',
+    link: 'http://www.linkedin.com/in/george-halikiopoulos/',
   },
 ]
 
@@ -317,9 +335,50 @@ const MemberCard = ({ member, index, invertedColors = false, customGrayIndices }
     <h3 className="text-xl md:text-2xl lg:text-2xl font-bold text-[#1A4B7A] mb-3 md:mb-4 tracking-wide">
       {member.name}
     </h3>
-    <p className="text-base md:text-lg text-gray-700 leading-relaxed max-w-sm md:max-w-md">
+    <p className="text-base md:text-lg text-gray-700 leading-relaxed max-w-sm md:max-w-md mb-4 whitespace-pre-line">
       {member.title}
     </p>
+    {member.link && (
+      <a
+        href={member.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full transition-colors ${
+          member.link.includes('linkedin.com') 
+            ? 'bg-[#0077b5] hover:bg-[#005885] mt-auto' 
+            : member.link.includes('startup-piraeus.gr')
+            ? 'bg-[#1A4B7A] hover:bg-[#0d3a5c] mt-auto'
+            : 'bg-[#1A4B7A] hover:bg-[#0d3a5c] mt-2'
+        }`}
+        aria-label={`Visit ${member.name}'s profile`}
+      >
+        {member.link.includes('linkedin.com') ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5 md:h-6 md:w-6 text-white flex-shrink-0"
+            fill="white"
+            viewBox="0 0 24 24"
+          >
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5 md:h-6 md:w-6 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+            />
+          </svg>
+        )}
+      </a>
+    )}
   </motion.div>
   )
 }
