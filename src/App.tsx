@@ -16,6 +16,7 @@ const Competition = lazy(() => import('./pages/Competition') as Promise<{ defaul
 const Contact = lazy(() => import('./pages/Contact') as Promise<{ default: ComponentType }>)
 const Home = lazy(() => import('./pages/Home') as Promise<{ default: ComponentType }>)
 const News = lazy(() => import('./pages/News') as Promise<{ default: ComponentType }>)
+const NewsDetail = lazy(() => import('./pages/NewsDetail') as Promise<{ default: ComponentType }>)
 const Privacy = lazy(() => import('./pages/Privacy') as Promise<{ default: ComponentType }>)
 const Terms = lazy(() => import('./pages/Terms') as Promise<{ default: ComponentType }>)
 const Timeline = lazy(() => import('./pages/Timeline') as Promise<{ default: ComponentType }>)
@@ -51,6 +52,7 @@ function App() {
             <Route path="/terms" element={<Terms />} />
             <Route path="/committees" element={<Committees />} />
             <Route path="/news" element={<News />} />
+            <Route path="/news/:slug" element={<NewsDetail />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
           </Routes>
