@@ -32,7 +32,6 @@ const LogoLoop = ({
   fadeOut = false,
   fadeOutColor = '#ffffff',
   ariaLabel,
-  useCustomRender = false,
 }: LogoLoopProps) => {
   const trackRef = useRef<HTMLDivElement>(null)
   const animationRef = useRef<number>()
