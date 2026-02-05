@@ -31,7 +31,7 @@ const Contact = () => {
                   alt="Green and blue innovation illustration"
                   className="w-auto h-auto max-w-[80%] max-h-[80%] object-contain"
                   loading="lazy"
-                  style={{ imageRendering: 'high-quality' }}
+                  style={{ imageRendering: 'auto' }}
                 />
               </motion.div>
 

@@ -229,3 +229,44 @@ You can configure branch previews and deploy contexts in both platforms' setting
 - **Netlify Docs**: [docs.netlify.com](https://docs.netlify.com)
 - **Vercel Support**: [vercel.com/support](https://vercel.com/support)
 - **Netlify Support**: [netlify.com/support](https://www.netlify.com/support)
+
+
+---
+
+## Security Hardening (Production)
+
+Use this checklist before going live:
+
+- Enable strict security headers (CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy).
+- Keep source maps disabled in production builds so browser users cannot easily inspect original source files.
+- Force HTTPS and redirect all HTTP traffic to HTTPS.
+- Keep dependencies updated (`npm outdated`) and run security checks in CI.
+- Cache static assets aggressively and HTML conservatively.
+
+### Rate Limiting Guidance
+
+This project is a static frontend (no exposed backend API routes in this repository), so app-level rate limiting is **not required** here.
+
+If you later add API endpoints or serverless functions, enable rate limits at the edge:
+
+- **Netlify**: place APIs behind a gateway/provider that supports per-IP limits.
+- **Cloudflare (recommended)**: add WAF/rate-limit rules for `/api/*`, login forms, and contact form endpoints.
+- Start with a conservative baseline, e.g. `60 requests/minute/IP` on sensitive routes, then tune using real traffic.
+
+---
+
+## Best Free Deployment Option
+
+For a zero-cost production setup with strong security controls:
+
+1. Deploy the static site on **Cloudflare Pages (Free)**.
+2. Put your domain on Cloudflare DNS (orange-cloud/proxied mode).
+3. Enable:
+   - Always Use HTTPS
+   - Automatic HTTPS Rewrites
+   - Bot Fight Mode (free)
+   - WAF managed rules (where available)
+4. Add custom rate-limit rules for sensitive paths if/when backend APIs are introduced.
+5. Keep your `_headers` file in `public/` so security headers are deployed automatically.
+
+This gives you global CDN delivery, TLS, and strong edge protections without cost for typical early-stage traffic.
