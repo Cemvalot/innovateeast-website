@@ -2,21 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Local Nunito Sans Variable Font */
+/* Local Inter Variable Font */
 @font-face {
-  font-family: 'Nunito Sans';
+  font-family: 'Inter';
   font-style: normal;
-  font-weight: 200 1000; /* Variable font weight range */
+  font-weight: 100 900; /* Variable font weight range */
   font-display: swap;
-  src: url('/fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
+  src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Nunito Sans';
+  font-family: 'Inter';
   font-style: italic;
-  font-weight: 200 1000; /* Variable font weight range */
+  font-weight: 100 900; /* Variable font weight range */
   font-display: swap;
-  src: url('/fonts/NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
+  src: url('/fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
 }
 
 @layer base {

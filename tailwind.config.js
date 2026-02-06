@@ -8,7 +8,7 @@ export default {
     extend: {
       fontFamily: {
         sans: [
-          'Nunito Sans',
+          'Inter',
           '-apple-system',
           'BlinkMacSystemFont',
           'Segoe UI',
