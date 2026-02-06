@@ -2,68 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Local Nunito Sans Font */
+/* Local Nunito Sans Variable Font */
 @font-face {
   font-family: 'Nunito Sans';
   font-style: normal;
-  font-weight: 300;
+  font-weight: 200 1000; /* Variable font weight range */
   font-display: swap;
-  src: url('/fonts/NunitoSans-Light.woff2') format('woff2'),
-       url('/fonts/NunitoSans-Light.woff') format('woff');
+  src: url('/fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Nunito Sans';
-  font-style: normal;
-  font-weight: 400;
+  font-style: italic;
+  font-weight: 200 1000; /* Variable font weight range */
   font-display: swap;
-  src: url('/fonts/NunitoSans-Regular.woff2') format('woff2'),
-       url('/fonts/NunitoSans-Regular.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Nunito Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/NunitoSans-Medium.woff2') format('woff2'),
-       url('/fonts/NunitoSans-Medium.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Nunito Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('/fonts/NunitoSans-SemiBold.woff2') format('woff2'),
-       url('/fonts/NunitoSans-SemiBold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Nunito Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/NunitoSans-Bold.woff2') format('woff2'),
-       url('/fonts/NunitoSans-Bold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Nunito Sans';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url('/fonts/NunitoSans-ExtraBold.woff2') format('woff2'),
-       url('/fonts/NunitoSans-ExtraBold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Nunito Sans';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url('/fonts/NunitoSans-Black.woff2') format('woff2'),
-       url('/fonts/NunitoSans-Black.woff') format('woff');
+  src: url('/fonts/NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
 }
 
 @layer base {
