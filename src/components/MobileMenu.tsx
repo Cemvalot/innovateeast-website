@@ -67,12 +67,7 @@ const MobileMenu = ({ isOpen, onClose, navLinks, currentPath }: MobileMenuProps)
                         href="https://383534e7-7332-4e0f-8956-daa42e69494b.filesusr.com/ugd/100ec9_5feae83082ab445eb5a9ab69002b5264.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={() => {
-                          console.log('Mobile menu link clicked!')
-                          // Let target="_blank" handle opening in new tab
-                          // No preventDefault needed - browser will handle it naturally
-                          onClose()
-                        }}
+                        onClick={onClose}
                         className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
                           currentPath === link.path
                             ? 'bg-[#1A4B7A]/10 text-[#1A4B7A]'

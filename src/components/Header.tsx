@@ -72,11 +72,6 @@ const Header = () => {
                     href="https://383534e7-7332-4e0f-8956-daa42e69494b.filesusr.com/ugd/100ec9_5feae83082ab445eb5a9ab69002b5264.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={(e) => {
-                      console.log('Header nav link clicked!')
-                      // Let target="_blank" handle opening in new tab
-                      // No preventDefault needed - browser will handle it naturally
-                    }}
                     className={`relative text-sm lg:text-base font-bold transition-colors ${
                       location.pathname === link.path
                         ? 'text-[#54AD40]'

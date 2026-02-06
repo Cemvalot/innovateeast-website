@@ -61,11 +61,6 @@ const Hero = () => {
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = 'linear-gradient(to right, #8BBA89, #8BBA89)'
                 }}
-                onClick={(e) => {
-                  console.log('Hero button clicked!')
-                  // Let target="_blank" handle opening in new tab
-                  // No preventDefault needed - browser will handle it naturally
-                }}
               >
                 ΟΡΟΙ ΣΥΜΜΕΤΟΧΗΣ
               </motion.a>
