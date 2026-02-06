@@ -1,5 +1,6 @@
 import { ComponentType, lazy, Suspense, useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 
 import AwardsModal from './components/AwardsModal'
 import CookieConsent from './components/CookieConsent'
@@ -60,6 +61,7 @@ function App() {
       </main>
       <Footer />
       <CookieConsent />
+      <Analytics />
     </div>
   )
 }
