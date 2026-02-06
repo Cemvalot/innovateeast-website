@@ -86,9 +86,9 @@ const CookieConsent = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 100, opacity: 0 }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed bottom-0 left-0 right-0 z-50 bg-[#4CAF50] text-white shadow-2xl"
+            className="fixed bottom-0 left-0 right-0 z-50 bg-[#4CAF50] text-white shadow-2xl pointer-events-none"
           >
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 pointer-events-auto">
               <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                 {/* Text */}
                 <div className="flex-1 text-sm md:text-base">
@@ -159,16 +159,16 @@ const CookieConsent = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setShowSettings(false)}
-            className="fixed inset-0 bg-black/50 z-[60]"
+            className="fixed inset-0 bg-black/50 z-[60] pointer-events-auto"
           />
 
           {/* Modal */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.95, x: '-50%', y: '-50%' }}
+            animate={{ opacity: 1, scale: 1, x: '-50%', y: '-50%' }}
+            exit={{ opacity: 0, scale: 0.95, x: '-50%', y: '-50%' }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-4 md:inset-auto md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:w-full md:max-w-2xl bg-white rounded-lg shadow-2xl z-[70] overflow-hidden flex flex-col max-h-[90vh]"
+            className="fixed top-1/2 left-1/2 w-[calc(100%-2rem)] sm:w-[calc(100%-4rem)] md:w-full md:max-w-2xl bg-white rounded-lg shadow-2xl z-[70] overflow-hidden flex flex-col max-h-[90vh]"
           >
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b">

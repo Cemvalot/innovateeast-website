@@ -71,7 +71,7 @@ const Footer = () => {
         <p className="text-center text-gray-700 text-sm">
           © 2024 by{' '}
           <a
-            href="https://breakeven.gr"
+            href="https://break-even.gr"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-[#1A4B7A]"

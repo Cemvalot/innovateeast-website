@@ -45,24 +45,30 @@ const Hero = () => {
             {/* Two Green CTA Buttons */}
             <div className="mt-12 flex flex-col gap-6">
               {/* Button 1: ΟΡΟΙ ΣΥΜΜΕΤΟΧΗΣ */}
-              <a href="https://383534e7-7332-4e0f-8956-daa42e69494b.filesusr.com/ugd/100ec9_5feae83082ab445eb5a9ab69002b5264.pdf" target="_blank" rel="noopener noreferrer" className="block w-fit">
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="h-[54px] px-12 rounded-none bg-[#8BBA89] text-white text-sm font-normal tracking-wide transition-all group"
-                  style={{
-                    background: 'linear-gradient(to right, #8BBA89, #8BBA89)',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = 'linear-gradient(to right, #3A7A8C, #4FB3A8)'
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = 'linear-gradient(to right, #8BBA89, #8BBA89)'
-                  }}
-                >
-                  ΟΡΟΙ ΣΥΜΜΕΤΟΧΗΣ
-                </motion.button>
-              </a>
+              <motion.a 
+                href="https://383534e7-7332-4e0f-8956-daa42e69494b.filesusr.com/ugd/100ec9_5feae83082ab445eb5a9ab69002b5264.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="block w-fit h-[54px] px-12 rounded-none bg-[#8BBA89] text-white text-sm font-normal tracking-wide transition-all group flex items-center justify-center"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                style={{
+                  background: 'linear-gradient(to right, #8BBA89, #8BBA89)',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(to right, #3A7A8C, #4FB3A8)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(to right, #8BBA89, #8BBA89)'
+                }}
+                onClick={(e) => {
+                  console.log('Hero button clicked!')
+                  // Let target="_blank" handle opening in new tab
+                  // No preventDefault needed - browser will handle it naturally
+                }}
+              >
+                ΟΡΟΙ ΣΥΜΜΕΤΟΧΗΣ
+              </motion.a>
               
               {/* Button 2: ΧΡΟΝΟΔΙΑΓΡΑΜΜΑ */}
               <Link to="/timeline" className="block w-fit">
